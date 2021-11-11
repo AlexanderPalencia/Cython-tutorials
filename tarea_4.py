@@ -12,3 +12,4 @@ def test(x):
         y += 1
         print(y)
     return y
+# Using Cython
