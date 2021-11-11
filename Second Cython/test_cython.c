@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "cython_script",
+        "name": "test_cython",
         "sources": [
-            "cython_script.pyx"
+            "test_cython.pyx"
         ]
     },
-    "module_name": "cython_script"
+    "module_name": "test_cython"
 }
 END: Cython Metadata */
 
@@ -624,8 +624,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cython_script
-#define __PYX_HAVE_API__cython_script
+#define __PYX_HAVE__test_cython
+#define __PYX_HAVE_API__test_cython
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -835,7 +835,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "cython_script.pyx",
+  "test_cython.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -1011,10 +1011,10 @@ static void __Pyx_AddTraceback(const char *funcname, int c_line,
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
 /* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
 
 /* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
@@ -1039,13 +1039,13 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'cython_script' */
-static int __pyx_f_13cython_script_test(int, int __pyx_skip_dispatch); /*proto*/
-#define __Pyx_MODULE_NAME "cython_script"
-extern int __pyx_module_is_main_cython_script;
-int __pyx_module_is_main_cython_script = 0;
+/* Module declarations from 'test_cython' */
+static int __pyx_f_11test_cython_test(int, int __pyx_skip_dispatch); /*proto*/
+#define __Pyx_MODULE_NAME "test_cython"
+extern int __pyx_module_is_main_test_cython;
+int __pyx_module_is_main_test_cython = 0;
 
-/* Implementation of 'cython_script' */
+/* Implementation of 'test_cython' */
 static PyObject *__pyx_builtin_range;
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
@@ -1057,67 +1057,67 @@ static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_pf_13cython_script_test(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_x); /* proto */
+static PyObject *__pyx_pf_11test_cython_test(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_x); /* proto */
 /* Late includes */
 
-/* "cython_script.pyx":1
+/* "test_cython.pyx":1
  * cpdef int test(int x):             # <<<<<<<<<<<<<<
- *     cdef int y = 1
- *     cdef int i
+ *   cdef int y = 0
+ *   cdef int i
  */
 
-static PyObject *__pyx_pw_13cython_script_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x); /*proto*/
-static int __pyx_f_13cython_script_test(int __pyx_v_x, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_11test_cython_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x); /*proto*/
+static int __pyx_f_11test_cython_test(int __pyx_v_x, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_y;
   int __pyx_v_i;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  long __pyx_t_1;
-  long __pyx_t_2;
+  int __pyx_t_1;
+  int __pyx_t_2;
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("test", 0);
 
-  /* "cython_script.pyx":2
+  /* "test_cython.pyx":2
  * cpdef int test(int x):
- *     cdef int y = 1             # <<<<<<<<<<<<<<
- *     cdef int i
- *     for i in range(1, x+1):
+ *   cdef int y = 0             # <<<<<<<<<<<<<<
+ *   cdef int i
+ *   for i in range(x):
  */
-  __pyx_v_y = 1;
+  __pyx_v_y = 0;
 
-  /* "cython_script.pyx":4
- *     cdef int y = 1
- *     cdef int i
- *     for i in range(1, x+1):             # <<<<<<<<<<<<<<
- *         y *= i
- *     return y
+  /* "test_cython.pyx":4
+ *   cdef int y = 0
+ *   cdef int i
+ *   for i in range(x):             # <<<<<<<<<<<<<<
+ *       y += i
+ *   return y
  */
-  __pyx_t_1 = (__pyx_v_x + 1);
+  __pyx_t_1 = __pyx_v_x;
   __pyx_t_2 = __pyx_t_1;
-  for (__pyx_t_3 = 1; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
+  for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "cython_script.pyx":5
- *     cdef int i
- *     for i in range(1, x+1):
- *         y *= i             # <<<<<<<<<<<<<<
- *     return y
+    /* "test_cython.pyx":5
+ *   cdef int i
+ *   for i in range(x):
+ *       y += i             # <<<<<<<<<<<<<<
+ *   return y
  */
-    __pyx_v_y = (__pyx_v_y * __pyx_v_i);
+    __pyx_v_y = (__pyx_v_y + __pyx_v_i);
   }
 
-  /* "cython_script.pyx":6
- *     for i in range(1, x+1):
- *         y *= i
- *     return y             # <<<<<<<<<<<<<<
+  /* "test_cython.pyx":6
+ *   for i in range(x):
+ *       y += i
+ *   return y             # <<<<<<<<<<<<<<
  */
   __pyx_r = __pyx_v_y;
   goto __pyx_L0;
 
-  /* "cython_script.pyx":1
+  /* "test_cython.pyx":1
  * cpdef int test(int x):             # <<<<<<<<<<<<<<
- *     cdef int y = 1
- *     cdef int i
+ *   cdef int y = 0
+ *   cdef int i
  */
 
   /* function exit code */
@@ -1127,8 +1127,8 @@ static int __pyx_f_13cython_script_test(int __pyx_v_x, CYTHON_UNUSED int __pyx_s
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13cython_script_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x); /*proto*/
-static PyObject *__pyx_pw_13cython_script_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x) {
+static PyObject *__pyx_pw_11test_cython_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x); /*proto*/
+static PyObject *__pyx_pw_11test_cython_1test(PyObject *__pyx_self, PyObject *__pyx_arg_x) {
   int __pyx_v_x;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1141,18 +1141,18 @@ static PyObject *__pyx_pw_13cython_script_1test(PyObject *__pyx_self, PyObject *
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("cython_script.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("test_cython.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_13cython_script_test(__pyx_self, ((int)__pyx_v_x));
+  __pyx_r = __pyx_pf_11test_cython_test(__pyx_self, ((int)__pyx_v_x));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13cython_script_test(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_x) {
+static PyObject *__pyx_pf_11test_cython_test(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_x) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1161,7 +1161,7 @@ static PyObject *__pyx_pf_13cython_script_test(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("test", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_13cython_script_test(__pyx_v_x, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_11test_cython_test(__pyx_v_x, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1170,7 +1170,7 @@ static PyObject *__pyx_pf_13cython_script_test(CYTHON_UNUSED PyObject *__pyx_sel
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cython_script.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("test_cython.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1179,24 +1179,24 @@ static PyObject *__pyx_pf_13cython_script_test(CYTHON_UNUSED PyObject *__pyx_sel
 }
 
 static PyMethodDef __pyx_methods[] = {
-  {"test", (PyCFunction)__pyx_pw_13cython_script_1test, METH_O, 0},
+  {"test", (PyCFunction)__pyx_pw_11test_cython_1test, METH_O, 0},
   {0, 0, 0, 0}
 };
 
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cython_script(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_test_cython(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cython_script},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_test_cython},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "cython_script",
+    "test_cython",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -1336,11 +1336,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcython_script(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcython_script(void)
+__Pyx_PyMODINIT_FUNC inittest_cython(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC inittest_cython(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cython_script(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cython_script(void)
+__Pyx_PyMODINIT_FUNC PyInit_test_cython(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_test_cython(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -1407,7 +1407,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_script(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_test_cython(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -1419,7 +1419,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cython_script(PyObject *__pyx_pyin
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cython_script' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'test_cython' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -1434,7 +1434,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cython_script(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_test_cython(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -1471,7 +1471,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cython_script", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("test_cython", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -1489,14 +1489,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cython_script) {
+  if (__pyx_module_is_main_test_cython) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cython_script")) {
-      if (unlikely(PyDict_SetItemString(modules, "cython_script", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "test_cython")) {
+      if (unlikely(PyDict_SetItemString(modules, "test_cython", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -1517,10 +1517,10 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "cython_script.pyx":1
+  /* "test_cython.pyx":1
  * cpdef int test(int x):             # <<<<<<<<<<<<<<
- *     cdef int y = 1
- *     cdef int i
+ *   cdef int y = 0
+ *   cdef int i
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1534,11 +1534,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init cython_script", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init test_cython", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cython_script");
+    PyErr_SetString(PyExc_ImportError, "init test_cython");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2073,44 +2073,6 @@ raise_neg_overflow:
 }
 
 /* CIntToPy */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
-#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wconversion"
-#endif
-    const long neg_one = (long) -1, const_zero = (long) 0;
-#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
-#pragma GCC diagnostic pop
-#endif
-    const int is_unsigned = neg_one > const_zero;
-    if (is_unsigned) {
-        if (sizeof(long) < sizeof(long)) {
-            return PyInt_FromLong((long) value);
-        } else if (sizeof(long) <= sizeof(unsigned long)) {
-            return PyLong_FromUnsignedLong((unsigned long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
-            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
-#endif
-        }
-    } else {
-        if (sizeof(long) <= sizeof(long)) {
-            return PyInt_FromLong((long) value);
-#ifdef HAVE_LONG_LONG
-        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
-            return PyLong_FromLongLong((PY_LONG_LONG) value);
-#endif
-        }
-    }
-    {
-        int one = 1; int little = (int)*(unsigned char *)&one;
-        unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(long),
-                                     little, !is_unsigned);
-    }
-}
-
-/* CIntToPy */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
@@ -2144,6 +2106,44 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
         int one = 1; int little = (int)*(unsigned char *)&one;
         unsigned char *bytes = (unsigned char *)&value;
         return _PyLong_FromByteArray(bytes, sizeof(int),
+                                     little, !is_unsigned);
+    }
+}
+
+/* CIntToPy */
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value) {
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+#endif
+    const long neg_one = (long) -1, const_zero = (long) 0;
+#ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+#pragma GCC diagnostic pop
+#endif
+    const int is_unsigned = neg_one > const_zero;
+    if (is_unsigned) {
+        if (sizeof(long) < sizeof(long)) {
+            return PyInt_FromLong((long) value);
+        } else if (sizeof(long) <= sizeof(unsigned long)) {
+            return PyLong_FromUnsignedLong((unsigned long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
+            return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
+#endif
+        }
+    } else {
+        if (sizeof(long) <= sizeof(long)) {
+            return PyInt_FromLong((long) value);
+#ifdef HAVE_LONG_LONG
+        } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
+            return PyLong_FromLongLong((PY_LONG_LONG) value);
+#endif
+        }
+    }
+    {
+        int one = 1; int little = (int)*(unsigned char *)&one;
+        unsigned char *bytes = (unsigned char *)&value;
+        return _PyLong_FromByteArray(bytes, sizeof(long),
                                      little, !is_unsigned);
     }
 }

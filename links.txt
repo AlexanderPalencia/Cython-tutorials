@@ -6,3 +6,5 @@
 # https://www.pyimagesearch.com/2019/09/09/multiprocessing-with-opencv-and-python/
 # https://www.pyimagesearch.com/2017/08/28/fast-optimized-for-pixel-loops-with-opencv-and-python/
 # https://www.youtube.com/watch?v=mXuEoqK4bEc
+
+https://towardsdatascience.com/use-cython-to-get-more-than-30x-speedup-on-your-python-code-f6cb337919b6
