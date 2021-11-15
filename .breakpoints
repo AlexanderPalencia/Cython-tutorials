@@ -7,6 +7,14 @@
         "version": 17,
         "index": 0
       }
+    ],
+    "cli commands.txt": [
+      {
+        "id": "61d840f2-127e-4711-8c6b-7818952c9fb0",
+        "line": 5,
+        "version": 13,
+        "index": 83
+      }
     ]
   }
 }
